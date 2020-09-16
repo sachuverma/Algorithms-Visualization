@@ -9,10 +9,15 @@
   </head>
   <body>
     <div id="maze-body"></div>
-    <div id="path-display"></div>
+
     <div id="buttons">
-      <button class="start-button" onclick="start()">Start Floodfill</button>
-      <button class="stop-button" onclick="refreshPage()">Reset</button>
+      <button class="start-button" id="start-button" onclick="start()">
+        Start Floodfill
+      </button>
+    </div>
+    <div id="path-display"></div>
+    <div id="paths-list">
+      <ul></ul>
     </div>
   </body>
 </html>

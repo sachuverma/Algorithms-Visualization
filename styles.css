@@ -1,14 +1,20 @@
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
 #maze-body {
   display: flex;
   flex-wrap: wrap;
   align-content: center;
   margin: auto;
 }
-#path-display{
+
+#path-display {
   padding: 20px;
   font-size: 2rem;
   text-align: center;
 }
+
 .square {
   height: 50px;
   width: 50px;
@@ -23,7 +29,8 @@
 #buttons {
   margin: 10px auto;
   align-content: center;
-  margin: auto;
+  /* margin: auto; */
+  text-align: center;
 }
 
 button {
@@ -56,10 +63,23 @@ button {
   cursor: pointer;
 }
 
-.visited-square{
-  background-color: rgb(63, 110, 124); */
+.last-square {
+  background-color: rgba(129, 15, 15, 0.37);
 }
 
-.last-square{
-  background-color: rgb(129, 15, 15); */
+.visited-square {
+  background-color: rgb(63, 110, 124);
+}
+
+.found-path {
+  background-color: rgb(129, 15, 15);
+}
+
+#paths-list {
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+#path-list ul {
+  list-style-type: none;
 }

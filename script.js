@@ -28,6 +28,8 @@ let maze = [
 let mazeBody = document.getElementById("maze-body");
 mazeBody.style.width = (maze[0].length + 1) * 50 + 10 + "px";
 let br = document.createElement("br");
+let startButton = document.getElementById("start-button");
+let pathList = document.getElementById("paths-list");
 
 for (let i = 0; i < maze.length; ++i) {
   for (let j = 0; j < maze[0].length; ++j) {
@@ -41,17 +43,21 @@ for (let i = 0; i < maze.length; ++i) {
 
 let r = maze.length - 1;
 let c = maze[0].length - 1;
+let pathCount = 0;
 document.getElementById(r + "_" + c).classList.add("last-square");
-// document.getElementById("0" + "_" + "0").classList.add("last-square");
 
-let start = () => {
+let start = async () => {
   console.log("starting flood fill");
+  startButton.innerHTML = "Running";
+  startButton.disabled = true;
   resetVisited();
-  getMazePath(maze, 0, 0, "");
+  await getMazePath(maze, 0, 0, "");
   console.log("ended flood fill");
+  startButton.innerHTML = "Start Floodfill";
+  startButton.disabled = false;
 };
 
-let getMazePath = (maze, r, c, ans) => {
+let getMazePath = async (maze, r, c, ans) => {
   if (
     r < 0 ||
     c < 0 ||
@@ -63,30 +69,35 @@ let getMazePath = (maze, r, c, ans) => {
     return;
 
   if (r == maze.length - 1 && c == maze[0].length - 1) {
+    pathCount++;
     document.getElementById("path-display").innerHTML =
-      "Path is: '" + ans + "'";
+      pathCount + " paths found";
+
+    let li = document.createElement("li");
+    li.textContent = ans;
+    pathList.appendChild(li);
+
     console.log("Path is: '" + ans + "'");
-    dffdg;
+    document.getElementById(r + "_" + c).classList.add("found-path");
+    await sleep(150);
+    document.getElementById(r + "_" + c).classList.remove("found-path");
+
     return;
   }
 
   let currSq = document.getElementById(r + "_" + c);
   currSq.classList.add("visited-square");
-  // sleep(1000);
-
+  await sleep(150);
   visited[r][c] = 1;
 
-  getMazePath(maze, r - 1, c, ans + "t");
-  getMazePath(maze, r, c - 1, ans + "l");
-  getMazePath(maze, r + 1, c, ans + "d");
-  getMazePath(maze, r, c + 1, ans + "r");
-
-  // lol_is_statemet_is_just_to_give_a_pause;
+  await getMazePath(maze, r - 1, c, ans + "t");
+  await getMazePath(maze, r, c - 1, ans + "l");
+  await getMazePath(maze, r + 1, c, ans + "d");
+  await getMazePath(maze, r, c + 1, ans + "r");
 
   visited[r][c] = 0;
-  // sleep(1000);
-
   currSq.classList.remove("visited-square");
+  await sleep(150);
 };
 
 function refreshPage() {
@@ -106,4 +117,8 @@ function resetVisited() {
     [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
     [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
   ];
+}
+
+function sleep(ms) {
+  return new Promise((resolve) => setTimeout(resolve, ms));
 }
