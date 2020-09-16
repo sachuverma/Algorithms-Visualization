@@ -33,7 +33,7 @@ for (let i = 0; i < maze.length; ++i) {
   for (let j = 0; j < maze[0].length; ++j) {
     let newDiv = document.createElement("div");
     newDiv.className = "square";
-    newDiv.id = i + "," + j;
+    newDiv.id = i + "_" + j;
     if (maze[i][j]) newDiv.classList.add("obstacle");
     mazeBody.appendChild(newDiv);
   }
@@ -64,21 +64,22 @@ let getMazePath = (maze, r, c, ans) => {
     return;
   }
 
-  let currSq = document.getElementById(r + "," + c);
+  let currSq = document.getElementById(r + "_" + c);
   currSq.classList.add("visited-square");
+  // sleep(1000);
+
   visited[r][c] = 1;
 
   getMazePath(maze, r - 1, c, ans + "t");
-
   getMazePath(maze, r, c - 1, ans + "l");
-
   getMazePath(maze, r + 1, c, ans + "d");
-
   getMazePath(maze, r, c + 1, ans + "r");
 
-  lol_is_statemet_is_just_to_give_a_pause;
+  // lol_is_statemet_is_just_to_give_a_pause;
 
   visited[r][c] = 0;
+  // sleep(1000);
+
   currSq.classList.remove("visited-square");
 };
 
