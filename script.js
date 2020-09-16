@@ -39,6 +39,11 @@ for (let i = 0; i < maze.length; ++i) {
   }
 }
 
+let r = maze.length - 1;
+let c = maze[0].length - 1;
+document.getElementById(r + "_" + c).classList.add("last-square");
+// document.getElementById("0" + "_" + "0").classList.add("last-square");
+
 let start = () => {
   console.log("starting flood fill");
   resetVisited();
@@ -61,6 +66,7 @@ let getMazePath = (maze, r, c, ans) => {
     document.getElementById("path-display").innerHTML =
       "Path is: '" + ans + "'";
     console.log("Path is: '" + ans + "'");
+    dffdg;
     return;
   }
 
