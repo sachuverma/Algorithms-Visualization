@@ -1,0 +1,61 @@
+#maze-body {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  margin: auto;
+}
+#path-display{
+  padding: 20px;
+  font-size: 2rem;
+  text-align: center;
+}
+.square {
+  height: 50px;
+  width: 50px;
+  background-color: rgb(235, 235, 235);
+  border: 2px solid rgba(255, 255, 255, 0);
+}
+
+.obstacle {
+  background-color: rgb(34, 34, 34);
+}
+
+#buttons {
+  margin: 10px auto;
+  align-content: center;
+  margin: auto;
+}
+
+button {
+  border-radius: 7px;
+  color: white;
+  font-size: 1.5rem;
+  padding: 6px 10px;
+  border: 1px solid rgba(255, 255, 255, 0);
+  /* box-shadow: 5px 5px 5px rgb(190, 190, 190); */
+  /* background-color: rgb(40, 69, 78); */
+  color: rgb(255, 255, 255);
+  transition: 0.3s;
+  align-content: center;
+  margin: auto;
+}
+.start-button {
+  background-color: rgba(47, 146, 27, 0.904);
+  color: white;
+}
+.start-button:hover {
+  background-color: rgb(21, 63, 13);
+  cursor: pointer;
+}
+.stop-button {
+  background-color: rgb(179, 65, 65);
+  color: white;
+}
+.stop-button:hover {
+  background-color: rgb(97, 35, 35);
+  cursor: pointer;
+}
+
+.visited-square{
+  background-color: rgb(63, 110, 124); */
+}
