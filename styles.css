@@ -54,6 +54,10 @@ button {
   background-color: rgb(21, 63, 13);
   cursor: pointer;
 }
+.running-button:hover {
+  background-color: rgb(12, 32, 8);
+  cursor: not-allowed;
+}
 .stop-button {
   background-color: rgb(179, 65, 65);
   color: white;
@@ -68,7 +72,7 @@ button {
 }
 
 .visited-square {
-  background-color: rgb(63, 110, 124);
+  background-color: rgb(107, 175, 196);
 }
 
 .found-path {
