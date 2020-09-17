@@ -1,5 +1,5 @@
 # Floodfill-Algo-Visualization
 
 A simple visualization of *Backtracking* code to find all the maze paths.
-[View Here](https://sachinverma53121.github.io/Floodfill-Algo-Visualization/)
+[View Here](https://sachinverma53121.github.io/Mazepath-Algo-Visualization/)
 ![1-Maze Path Animation](demo/maze_path.gif)
