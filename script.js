@@ -1,10 +1,4 @@
 // Global variables
-let mazeBody = document.getElementById("maze-body");
-mazeBody.style.width = (maze[0].length + 1) * 50 + 10 + "px";
-let br = document.createElement("br");
-let startButton = document.getElementById("start-button");
-let pathList = document.getElementById("paths-list");
-
 // Array to keep trak of visited cells so that we don't form endless loops with traking
 let visited = [
   [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
@@ -33,9 +27,16 @@ let maze = [
   [0, 1, 0, 0, 0, 1, 1, 0, 0, 0],
 ];
 
-let r = maze.length - 1;      // max rows in maze
-let c = maze[0].length - 1;   // max columns in maze
-let pathCount = 0;            // valid paths counter
+// maze styles based on maze matrix
+let mazeBody = document.getElementById("maze-body");
+mazeBody.style.width = (maze[0].length + 1) * 50 + 10 + "px";
+let br = document.createElement("br");
+let startButton = document.getElementById("start-button");
+let pathList = document.getElementById("paths-list");
+
+let r = maze.length - 1;                                      // max rows in maze
+let c = maze[0].length - 1;                                   // max columns in maze
+let pathCount = 0;                                            // valid paths counter
 
 // Displaying maze on front-end based on the maze matrix earlier initialized
 for (let i = 0; i < maze.length; ++i) {
