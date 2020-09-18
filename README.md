@@ -1,6 +1,6 @@
 # Maze Paths Algorithm Visualization
 
-## A simple visualization of **backtracking** code [Check Here](https://sachinverma53121.github.io/Mazepath-Algo-Visualization/)
+## A simple visualization of **backtracking** code [Check Here](https://sachuverma.github.io/Mazepath-Algo-Visualization/)
 
 ### I tried making a visualization for a data structures problem where _we need to find all possible paths from top left cell to bottom right cell in a maze_.
 
