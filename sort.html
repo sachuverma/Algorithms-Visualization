@@ -1,38 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Sorting!</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="sort.css">
-    </head>
-    <body>
-
-        <div id="header">
-            <span>See the Sort! </h2> 
-            <span><a href="/maze.html"> Maze Path</a></h2>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Sorting!</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="sort.css">
+  </head>
+  <body>
+    <div id="header">
+        <span>Array Algorithms! </h2> 
+        <span><a href="./maze.html"> Maze Path</a></h2>
+    </div>
+    <div id="sorting-panel">
+        <div id="sort-container">
         </div>
-        
-        <div id="sorting-panel">
-            <div id="sort-container">
-            </div>
-        </div>
-        
+    </div>
+    <div id="bottom-panel">
+      <span>
+        <div class="buttons">
+          <button class="" onclick="insertionSort();">Insertion Sort</button>
+          <button class="" onclick="bubbleSort();">Bubble Sort</button>
+            <!-- <button class="" onclick="quickSort();">Quick Sort</button> -->
+            <button class="" onclick="mergeSort();">Merge Sort</button>
+            <button class="" onclick="radixSort();">Radix Sort</button>
 
-        <div id="bottom-panel">
-            <span>
-                <div class="buttons">
-                  <button class="" onclick="insertionSort();">Insertion Sort</button>
-                  <button class="" onclick="bubbleSort();">Bubble Sort</button>
-                    <!-- <button class="" onclick="quickSort();">Quick Sort</button> -->
-                    <button class="" onclick="mergeSort();">Merge Sort</button>
-                    <button class="" onclick="radixSort();">Radix Sort</button>
-
-                    <button class="shuffle-button" id="shuffle" onclick="shuffle();">Shuffle Array</button>
-                </div>
-            </span>
+            <button class="shuffle-button" id="shuffle" onclick="shuffle();">Shuffle Array</button>
         </div>
-        <script src="sort.js" async defer></script>
-    </body>
+      </span>
+    </div>
+    <script src="sort.js" async defer></script>
+  </body>
 </html>
