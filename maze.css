@@ -1,5 +1,36 @@
 body {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+#header {
+  width: 100%;
+  position: relative;
+  top: 0;
+  background-color: #33527a;
+  height: 60px;
+  margin: 0;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+#header span {
+  margin: auto 5px;
+  font-size: 1.7rem;
+}
+
+#header span a {
+  text-decoration: none;
+  color: rgb(224, 134, 134);
+}
+
+#header span a:hover {
+  text-decoration: underline;
+  color: rgb(224, 49, 49);
 }
 
 #maze-body {
@@ -67,12 +98,20 @@ button {
   cursor: pointer;
 }
 
+button:disabled {
+  cursor: not-allowed;
+}
+
 .last-square {
   background-color: rgba(129, 15, 15, 0.37);
 }
 
 .visited-square {
-  background-color: rgb(107, 175, 196);
+  background-color: rgb(63, 150, 177);
+}
+
+.bfs-path-square {
+  background-color: rgb(255, 123, 0);
 }
 
 .found-path {

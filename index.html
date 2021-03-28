@@ -4,15 +4,26 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Maze Paths</title>
-    <link rel="stylesheet" href="styles.css" />
-    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="maze.css" />
+    <script src="maze.js" defer></script>
   </head>
   <body>
+    <div id="header">
+      <span>See the Path! </span> 
+      <span><a href="/sort.html"> Sorting</a></span>
+    </div>
+
     <div id="maze-body"></div>
 
     <div id="buttons">
-      <button class="start-button" id="start-button" onclick="start()">
-        Start Algorithm
+      <button class="start-button" id="start-button" onclick="allPaths()">
+        All Paths
+      </button>
+      <button class="start-button" id="short-button" onclick="shortestPath()">
+        Shortest Path
+      </button>
+      <button class="stop-button" onClick="window.location.reload();">
+        Reset
       </button>
     </div>
     <div id="path-display"></div>
