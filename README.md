@@ -20,7 +20,7 @@ This will follow a path and check if the path reaches the destination or not. If
 
 ### 2. Shortest Path, Source to Destination
 
-THe algorithm used here is `Breadth First Search`
+THe algorithm used here is `Breadth First Search`  
 To find the shortest path, all you have to do is start from the source and perform a breadth first search and stop when you find your destination Node.
 
 However, if the graph is more complex, containing weighted edges and loops, then we need a more sophisticated version of BFS, i.e. Dijkstra's algorithm.
